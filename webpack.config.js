@@ -3,10 +3,10 @@ const TerserPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/server/index.js',
   output: {
-    filename: 'backend/bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'server')
   },
   target: 'node',
   mode: 'production',
@@ -20,7 +20,7 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'public', to: path.resolve(__dirname, 'app') } // Копируем файлы в корневую директорию 'app'
+        { from: 'src/app', to: path.resolve(__dirname, 'app') } // Копируем файлы в корневую директорию 'app'
       ]
     })
   ]

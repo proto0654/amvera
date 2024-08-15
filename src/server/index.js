@@ -3,10 +3,10 @@ const path = require('path');
 const app = express();
 
 // Указываем директорию, где находятся статические файлы
-app.use(express.static(path.join(__dirname, 'app')));
+app.use(express.static(path.join(__dirname, '../app')));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'app', 'index.html'));
+  res.sendFile(path.join(__dirname, '../app', 'index.html'));
 });
 
 const PORT = process.env.PORT || 3000;

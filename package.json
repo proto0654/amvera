@@ -2,9 +2,11 @@
   "name": "amvera-bot",
   "version": "1.0.0",
   "description": "amvera-tg-bot",
-  "main": "server/index.js",
+  "main": "src/server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/bundle.js",
+    "dev": "nodemon src/server/index.js",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,20 @@
   },
   "homepage": "https://github.com/proto0654/amvera#readme",
   "dependencies": {
-    "webpack": "^5.93.0"
+    "axios": "^1.7.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-telegram-bot-api": "^0.66.0",
+    "nodemon": "^3.1.4",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "terser-webpack-plugin": "^5.3.1",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0"
+  },
+  "bin": {
+    "lebovski": "./server/bundle.js"
   }
 }
