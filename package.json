@@ -1,0 +1,22 @@
+{
+  "name": "amvera-bot",
+  "version": "1.0.0",
+  "description": "amvera-tg-bot",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proto0654/amvera.git"
+  },
+  "author": "proto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/proto0654/amvera/issues"
+  },
+  "homepage": "https://github.com/proto0654/amvera#readme",
+  "dependencies": {
+    "webpack": "^5.93.0"
+  }
+}
